@@ -1,0 +1,12 @@
+{
+    "name": "leslie-w/lemp",
+    "autoload": {
+        "psr-4": {
+            "LeslieW\\LEMP\\": "src/"
+        }
+    },
+    "require": {
+      "ext-pdo": "*",
+      "ext-redis": "*"
+    }
+}
