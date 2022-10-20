@@ -26,7 +26,7 @@
                     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">PHP info</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a href="/phpmyadmin" class="nav-link" id="phpmyadmin-tab" type="button" >Phpmyadmin</a>
+                    <a href="/phpmyadmin" class="nav-link" id="phpmyadmin-tab" type="button"  target="_blank" >Phpmyadmin</a>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
