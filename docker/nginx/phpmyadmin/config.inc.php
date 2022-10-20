@@ -3,7 +3,7 @@
  * This is needed for cookie based authentication to encrypt password in
  * cookie
  */
-$cfg['blowfish_secret'] = 'leslie-w-lemp'; /* YOU SHOULD CHANGE THIS FOR A MORE SECURE COOKIE AUTH! */
+$cfg['blowfish_secret'] = 'LeslieW-mysql'; /* YOU SHOULD CHANGE THIS FOR A MORE SECURE COOKIE AUTH! */
 
 /*
  * Servers configuration
