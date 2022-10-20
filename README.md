@@ -77,44 +77,91 @@ Commands:
 ### Project tree
 
 ```
-📦docker
- ┣ 📂mysql
- ┃ ┣ 📂conf.d
- ┃ ┃ ┗ 📜my.cnf
- ┃ ┗ 📜Dockerfile
- ┣ 📂nginx
- ┃ ┣ 📂conf.d
- ┃ ┃ ┗ 📜default.conf
- ┃ ┣ 📂logs
- ┃ ┃ ┣ 📜access.log
- ┃ ┃ ┣ 📜error.log
- ┃ ┃ ┣ 📜www-access.log
- ┃ ┃ ┗ 📜www-error.log
- ┃ ┣ 📂php
- ┃ ┃ ┗ 📂pool.d
- ┃ ┃ ┃ ┗ 📜www.conf
- ┃ ┣ 📂phpmyadmin
- ┃ ┣ 📂src
- ┃ ┃ ┣ 📂public
- ┃ ┃ ┃ ┣ 📜index.php
- ┃ ┃ ┃ ┗ 📜phpinfo.php
+📦docker-lesliew-lemp
+ ┣ 📂docker
+ ┃ ┣ 📂mysql
+ ┃ ┃ ┣ 📂conf.d
+ ┃ ┃ ┃ ┗ 📜my.cnf
+ ┃ ┃ ┗ 📜Dockerfile
+ ┃ ┣ 📂nginx
+ ┃ ┃ ┣ 📂conf.d
+ ┃ ┃ ┃ ┗ 📜default.conf
+ ┃ ┃ ┣ 📂logs
+ ┃ ┃ ┃ ┣ 📜access.log
+ ┃ ┃ ┃ ┣ 📜error.log
+ ┃ ┃ ┃ ┣ 📜www-access.log
+ ┃ ┃ ┃ ┗ 📜www-error.log
+ ┃ ┃ ┣ 📂php
+ ┃ ┃ ┃ ┗ 📂pool.d
+ ┃ ┃ ┃ ┃ ┗ 📜www.conf
+ ┃ ┃ ┣ 📂phpmyadmin
+ ┃ ┃ ┃ ┗ 📜config.inc.php
  ┃ ┃ ┣ 📂src
- ┃ ┃ ┃ ┣ 📂bin
- ┃ ┃ ┃ ┃ ┗ 📜supervisord.php
- ┃ ┃ ┃ ┣ 📂views
- ┃ ┃ ┃ ┃ ┗ 📜index.php
- ┃ ┃ ┃ ┗ 📜Application.php
- ┃ ┃ ┣ 📜.gitignore
- ┃ ┃ ┣ 📜composer.json
- ┃ ┃ ┗ 📜composer.lock
- ┃ ┣ 📜default.template.conf
- ┃ ┣ 📜Dockerfile
- ┃ ┗ 📜nginx.conf
- ┣ 📂php
- ┃ ┣ 📂conf.d
- ┃ ┃ ┣ 📜php.ini
- ┃ ┃ ┗ 📜xdebug.ini
- ┃ ┗ 📜Dockerfile
+ ┃ ┃ ┃ ┣ 📂public
+ ┃ ┃ ┃ ┃ ┣ 📜index.php
+ ┃ ┃ ┃ ┃ ┗ 📜phpinfo.php
+ ┃ ┃ ┃ ┣ 📂src
+ ┃ ┃ ┃ ┃ ┣ 📂bin
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜supervisord.php
+ ┃ ┃ ┃ ┃ ┣ 📂views
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜index.php
+ ┃ ┃ ┃ ┃ ┗ 📜Application.php
+ ┃ ┃ ┃ ┣ 📂vendor
+ ┃ ┃ ┃ ┃ ┣ 📂composer
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜autoload_classmap.php
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜autoload_namespaces.php
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜autoload_psr4.php
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜autoload_real.php
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜autoload_static.php
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ClassLoader.php
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜installed.json
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜installed.php
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜InstalledVersions.php
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜LICENSE
+ ┃ ┃ ┃ ┃ ┗ 📜autoload.php
+ ┃ ┃ ┃ ┣ 📜.gitignore
+ ┃ ┃ ┃ ┣ 📜composer.json
+ ┃ ┃ ┃ ┗ 📜composer.lock
+ ┃ ┃ ┣ 📜default.template.conf
+ ┃ ┃ ┣ 📜Dockerfile
+ ┃ ┃ ┗ 📜nginx.conf
+ ┃ ┗ 📂supervisord
+ ┃ ┃ ┣ 📂conf.d
+ ┃ ┃ ┃ ┗ 📜example.conf
+ ┃ ┃ ┣ 📜Dockerfile
+ ┃ ┃ ┗ 📜supervisord.conf
+ ┣ 📂docs
+ ┃ ┣ 📂media
+ ┃ ┃ ┣ 📂codesniffer
+ ┃ ┃ ┃ ┣ 📜codesniffer1.png
+ ┃ ┃ ┃ ┣ 📜codesniffer2.png
+ ┃ ┃ ┃ ┣ 📜codesniffer3.png
+ ┃ ┃ ┃ ┣ 📜codesniffer4.png
+ ┃ ┃ ┃ ┗ 📜codesniffer5.png
+ ┃ ┃ ┣ 📂xdebug
+ ┃ ┃ ┃ ┣ 📜xdebug1.png
+ ┃ ┃ ┃ ┣ 📜xdebug10.png
+ ┃ ┃ ┃ ┣ 📜xdebug11.png
+ ┃ ┃ ┃ ┣ 📜xdebug12.png
+ ┃ ┃ ┃ ┣ 📜xdebug13.png
+ ┃ ┃ ┃ ┣ 📜xdebug14.png
+ ┃ ┃ ┃ ┣ 📜xdebug15.png
+ ┃ ┃ ┃ ┣ 📜xdebug2.png
+ ┃ ┃ ┃ ┣ 📜xdebug3.png
+ ┃ ┃ ┃ ┣ 📜xdebug4.png
+ ┃ ┃ ┃ ┣ 📜xdebug5.png
+ ┃ ┃ ┃ ┣ 📜xdebug6.png
+ ┃ ┃ ┃ ┣ 📜xdebug7.png
+ ┃ ┃ ┃ ┣ 📜xdebug8.png
+ ┃ ┃ ┃ ┗ 📜xdebug9.png
+ ┃ ┃ ┗ 📜result.png
+ ┃ ┣ 📜codesniffer.md
+ ┃ ┗ 📜xdebug.md
+ ┣ 📜.env_example
+ ┣ 📜.gitignore
+ ┣ 📜docker-compose.yml
+ ┣ 📜LICENSE
+ ┗ 📜README.md
 ```
 
 ### Project links

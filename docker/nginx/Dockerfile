@@ -19,10 +19,12 @@ RUN apt-get update && apt-get install -y wget nginx php${PHP_VERSION} \
 
 RUN phpv=`echo ${PHP_VERSION} | sed s/[.]//g` && if test  ${phpv} -ge 72 ; then cd /var/www \
     && wget -c "https://files.phpmyadmin.net/phpMyAdmin/5.2.0/phpMyAdmin-5.2.0-all-languages.tar.gz" \
-    && tar -zxvf phpMyAdmin-5.2.0-all-languages.tar.gz && mv phpMyAdmin-5.2.0-all-languages phpmyadmin ; \ 
+    && tar -zxvf phpMyAdmin-5.2.0-all-languages.tar.gz && mv phpMyAdmin-5.2.0-all-languages phpmyadmin \
+    && rm -rf phpMyAdmin-5.2.0-all-languages.tar.gz; \ 
     else cd /var/www \
     && wget -c "https://files.phpmyadmin.net/phpMyAdmin/4.9.10/phpMyAdmin-4.9.10-all-languages.tar.gz" \
-    && tar -zxvf phpMyAdmin-4.9.10-all-languages.tar.gz && mv phpMyAdmin-4.9.10-all-languages phpmyadmin ; \ 
+    && tar -zxvf phpMyAdmin-4.9.10-all-languages.tar.gz && mv phpMyAdmin-4.9.10-all-languages phpmyadmin \
+    && rm -rf phpMyAdmin-4.9.10-all-languages.tar.gz; \ 
     fi
 
 
